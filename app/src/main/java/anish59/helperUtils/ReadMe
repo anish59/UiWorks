@@ -1,0 +1,56 @@
+1. Dialog helper class contains
+   - Dialogs with listeners("ok" and "yes no")
+
+2. Filters
+   a. DesiredCharSet
+        - We can pass all the characters in its constructor to allow or not to allow based on a flag in it.
+   b. DecimalDigitsInputFilter
+        - It is use to set maximum digits before point and after point.
+
+3. ViewControls
+
+    a. Custom -> TextView, EditText, Button
+
+    steps:
+        1. keep all fonts in asset folder under main folder
+        2. Create CVController class (refer widgets)
+        3. Create attrs.xml in values folder (as below)
+
+        ===========================================================
+        <resources>
+            <attr name="font" format="string" />
+            <declare-styleable name="CEditText">
+                <attr name="font" />
+            </declare-styleable>
+
+            <declare-styleable name="CTextView">
+                <attr name="font" />
+            </declare-styleable>
+        </resources>
+       =============================================================
+
+        4. Add this in Strings.xml <string name="acme_regular">acme_regular.ttf</string>
+        5. Create Custom EditText(or textView or Button) (refer CEditText)
+        6. Use CEditText in xml layout instead of EditText
+        7. Add parameter--> app:font="@string/acme_regular" in CEditText
+        8. Good to go!!
+
+    b. Custom spinner -> Searchable Spinner:
+        - In this you have the searchable functionality as the name says.
+        - Just implement not experimented much.
+
+4. AlarmHelper
+    - Use to set and cancel Alarm (say Notification).
+    - For more explore by yourself
+
+5. DateHelper
+    - Date and TimePicker method is kept (we can do more in this if needed).
+    - Many date,calendar and string conversion method is declared (you can add more methods if required).
+
+6. Helper Functions
+    - Here I have kept functionality for toast and logs (just refer it and you will come to know).
+
+7. Prefs (SharedPreference data storing purpose)
+    - You know what it means, if you don't know what it means take a hammer, be the thor and break your pc.
+    - To know how to use it you can see PrefUtils.
+
