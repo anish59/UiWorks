@@ -42,6 +42,19 @@
 4. AlarmHelper
     - Use to set and cancel Alarm (say Notification).
     - For more explore by yourself
+    - Don't forget to keep permission and receiver tag in Manifest
+
+    ==================================================================================
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+     <receiver
+                android:name=".utilPack.AlarmHelper"
+                android:enabled="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+     </receiver>
+    ===================================================================================
 
 5. DateHelper
     - Date and TimePicker method is kept (we can do more in this if needed).
